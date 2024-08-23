@@ -15,9 +15,9 @@
         </div>
 
         <div class="DivGeralPets">
-            <div *ngFor="let imgPet of imgPets">
-                <img [src]="imgPet" alt="Imagem do pet disponível">
-                <p>NOME DO PET</p>
+            <div *ngFor="let imgPet of Pets">
+                <img [src]="imgPet.img" alt="Imagem do pet disponível">
+                <p>{{imgPet.nome}}</p>
                 <button (click)="AbrirDados()">SAIBA MAIS</button>
             </div>
         </div>
@@ -36,23 +36,23 @@
             <div class="DivDadosAdicionais">
                 <div>
                     <span class="material-symbols-outlined">pets</span>
-                    <p>Dados</p>
+                    <p>Vacinada</p>
                 </div>
                 <div>
                     <span class="material-symbols-outlined">pets</span>
-                    <p>Dados</p>
+                    <p>Idade: 2 anos</p>
                 </div>
                 <div>
                     <span class="material-symbols-outlined">pets</span>
-                    <p>Dados</p>
+                    <p>Sexo: Fêmea</p>
                 </div>
                 <div>
                     <span class="material-symbols-outlined">pets</span>
-                    <p>Dados</p>
+                    <p>Porte: Médio</p>
                 </div>
                 <div>
                     <span class="material-symbols-outlined">pets</span>
-                    <p>Dados</p>
+                    <p>Está castrada</p>
                 </div>
             </div>
             <button (click)="FecharDados()" routerLink="/formulario">ADOTE</button>
